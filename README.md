@@ -85,7 +85,7 @@ python eval_only_v3.py --config configs/lowlight.yml --checkpoint checkpoints/lo
 ├── configs/       # Configuration files
 ├── checkpoints/   # Pretrained models
 
-##Notes
+## Notes
 Ensure CUDA and GPU drivers are correctly installed.
 Upgrade pip if needed:
 python -m pip install --upgrade pip
