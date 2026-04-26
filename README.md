@@ -18,3 +18,77 @@ Install PyTorch and project dependencies:
 ```bash
 pip install torch torchvision torchaudio
 pip install -r requirements.txt
+
+## Dataset Preparation
+
+Download the datasets and organize them under:
+./datasets/scratch/LLIE
+Directory structure:
+LLIE
+├── LOLv1
+│   ├── Train
+│   │   ├── input
+│   │   └── gt
+│   └── Test
+│       ├── input
+│       └── gt
+├── LOLv2
+│   ├── Real_captured
+│   │   ├── Train
+│   │   └── Test
+│   └── Synthetic
+│       ├── Train
+│       └── Test
+Please ensure the directory structure is strictly followed.
+
+
+## Pre-trained Models
+
+Pretrained checkpoints:
+
+Baidu Cloud: https://pan.baidu.com/s/1oOooNYFCznpJ1SC-eJ0s_g
+Extraction code: 9912
+
+Place the downloaded files under:
+
+./checkpoints
+
+## Training
+
+Run training with:
+
+python train_diffusion.py --config configs/lowlight.yml
+
+You can modify the following settings in configs/lowlight.yml:
+
+Dataset paths
+Batch size
+Number of epochs
+Other hyperparameters
+
+
+##Inference / Evaluation
+
+Run evaluation with:
+
+python eval_only_v3.py --config configs/lowlight.yml --checkpoint <checkpoint_path>
+
+Example:
+
+python eval_only_v3.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-real.pth
+
+## Repository Structure
+├── models/        # Model implementations
+├── datasets/      # Dataset loaders
+├── utils/         # Utilities and metrics
+├── configs/       # Configuration files
+├── checkpoints/   # Pretrained models
+
+##Notes
+Ensure CUDA and GPU drivers are correctly installed.
+Upgrade pip if needed:
+python -m pip install --upgrade pip
+Ensure sufficient storage for large datasets.
+Code Availability
+
+The complete implementation is currently under preparation and will be fully released upon paper acceptance.
