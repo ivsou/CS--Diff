@@ -23,9 +23,11 @@ pip install -r requirements.txt
 ## Dataset Preparation
 
 Download the datasets and organize them under:
+```bash
 ./datasets/scratch/LLIE
+```
 Directory structure:
-``` Plaintext
+```text
 LLIE
 ├── LOLv1
 │   ├── Train
@@ -41,8 +43,9 @@ LLIE
 │   └── Synthetic
 │       ├── Train
 │       └── Test
-Please ensure the directory structure is strictly followed.
+
 ```
+Please ensure the directory structure is strictly followed.
 
 ## Pre-trained Models
 
@@ -52,9 +55,9 @@ Baidu Cloud: https://pan.baidu.com/s/1oOooNYFCznpJ1SC-eJ0s_g
 Extraction code: 9912
 
 Place the downloaded files under:
-
+```bash
 ./checkpoints
-
+```
 ## Training
 
 Run training with:
@@ -79,10 +82,9 @@ python eval_only_v3.py --config configs/lowlight.yml --checkpoint <checkpoint_pa
 Example:
 ```bash
 python eval_only_v3.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-real.pth
-python eval_only_v3.py --config configs/lowlight.yml --checkpoint <checkpoint_path>
 ```
 ## Repository Structure
-``` Plaintext
+```text
 ├── models/        # Model implementations
 ├── datasets/      # Dataset loaders
 ├── utils/         # Utilities and metrics
