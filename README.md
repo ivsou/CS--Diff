@@ -168,5 +168,3 @@ python eval_only_v3.py --config configs/lowlight.yml --checkpoint checkpoints/ls
 - If you encounter CUDA-related errors, verify your GPU drivers, CUDA toolkit installation, and that your installed `torch` matches the CUDA version.\
 - Upgrade `pip` if dependency installation fails: `python -m pip install --upgrade pip`.\
 - For large datasets, ensure sufficient disk space and correct file permissions.
-
-If you would like, I can also generate a short example command sequence for preparing the environment on Windows or add an English/Chinese bilingual README.
