@@ -1,170 +1,94 @@
+# CS³-Diff: Collaborative Spatio-Spectral-Scale Guided Diffusion for Low-Light Image Enhancement
 
-**Overview**
+## Overview
 
-This repository implements a diffusion-based approach for Low-light Image Enhancement (LLIE). It contains training and evaluation scripts, model implementations, dataset loaders, and utility functions. Project dependencies are listed in `requirements.txt`.
+This repository provides the official implementation of **CS³-Diff**, a diffusion-based framework for low-light image enhancement (LLIE). The project includes training and evaluation scripts, model implementations, dataset loaders, and utility functions.
 
-**Environment Setup**
+All required dependencies are listed in `requirements.txt`.
 
-- Recommended platform: NVIDIA GPU with CUDA support.\
-- Python: 3.12
+---
 
-Install the primary packages and the project requirements with:
+## Environment Setup
+
+- Platform: NVIDIA GPU with CUDA support (recommended)  
+- Python: 3.12  
+
+Install PyTorch and project dependencies:
 
 ```bash
 pip install torch torchvision torchaudio
 pip install -r requirements.txt
-```
 
-Note: Install the `torch` build that matches your CUDA version; consult the official PyTorch installation guide for the correct wheel if needed.
+## Dataset Preparation
 
-**Dataset: Placement and Structure**
+Download the datasets and organize them under the following directory:
 
-Download the datasets and place them under the following folder in this repository:
+./datasets/scratch/LLIE
 
-`.\datasets\scratch\LLIE`
+The directory structure should follow:
 
-Organize the dataset directory exactly as shown below:
-
-```text
 LLIE
-|--LOLv1
-|    |--Train
-|    |    |--input
-|    |    |    |--100.png
-|    |    |    |--101.png
-|    |    |    |    ...
-|    |    |--gt
-|    |    |    |--100.png
-|    |    |    |--101.png
-|    |    |    |    ...
-|    |--Test
-|    |    |--input
-|    |    |    |--111.png
-|    |    |    |--146.png
-|    |    |    |    ...
-|    |    |--gt
-|    |    |    |--111.png
-|    |    |    |--146.png
-|    |    |    |    ...
-|--LOLv2
-|    |--Real_captured
-|    |    |--Train
-|    |    |    |--input
-|    |    |    |    |--00001.png
-|    |    |    |    |--00002.png
-|    |    |    |    |    ...
-|    |    |    |--gt
-|    |    |    |    |--00001.png
-|    |    |    |    |--00002.png
-|    |    |    |    |    ...
-|    |    |--Test
-|    |    |    |--input
-|    |    |    |    |--00690.png
-|    |    |    |    |--00691.png
-|    |    |    |    |    ...
-|    |    |    |--gt
-|    |    |    |    |--00690.png
-|    |    |    |    |--00691.png
-|    |    |    |    |    ...
-|    |--Synthetic
-|    |    |--Train
-|    |    |    |--input
-|    |    |    |    |--r000da54ft.png
-|    |    |    |    |--r02e1abe2t.png
-|    |    |    |    |    ...
-|    |    |    |--gt
-|    |    |    |    |--r000da54ft.png
-|    |    |    |    |--r02e1abe2t.png
-|    |    |    |    |    ...
-|    |    |--Test
-|    |    |    |--input
-|    |    |    |    |--r00816405t.png
-|    |    |    |    |--r02189767t.png
-|    |    |    |    |    ...
-|    |    |    |--gt
-+|    |    |    |    |--r00816405t.png
-|    |    |    |    |--r02189767t.png
-|    |    |    |    |    ...
-```
+├── LOLv1
+│   ├── Train
+│   │   ├── input
+│   │   └── gt
+│   └── Test
+│       ├── input
+│       └── gt
+├── LOLv2
+│   ├── Real_captured
+│   │   ├── Train
+│   │   └── Test
+│   └── Synthetic
+│       ├── Train
+│       └── Test
 
-**Pre-trained Checkpoints**
+Please ensure that file names and folder hierarchy strictly follow the above format.
 
-Download the pretrained checkpoints from the provided Baidu cloud link and extract them into the repository `checkpoints` folder:
+Pre-trained Models
 
-Link: https://pan.baidu.com/s/1oOooNYFCznpJ1SC-eJ0s_g  Extraction code: `9912`
+Pretrained checkpoints can be downloaded from:
 
-Place the downloaded files under:
+Baidu Cloud: https://pan.baidu.com/s/1oOooNYFCznpJ1SC-eJ0s_g
+Extraction code: 9912
 
-`.\checkpoints`
+After downloading, place the files under:
 
-**Training**
+./checkpoints
+Training
 
-Run training for each dataset configuration as follows (the config file `configs/lowlight.yml` is used for all runs):
+Run training with:
 
-- LOLv2-Real:
-
-```bash
 python train_diffusion.py --config configs/lowlight.yml
-```
 
-- LOLv2-Syn:
+You may modify the following settings in configs/lowlight.yml:
 
-```bash
-python train_diffusion.py --config configs/lowlight.yml
-```
+Dataset paths
+Batch size
+Number of epochs
+Other hyperparameters
+Inference / Evaluation
 
-- LOLv1:
+Run evaluation with:
 
-```bash
-python train_diffusion.py --config configs/lowlight.yml
-```
+python eval_only_v3.py --config configs/lowlight.yml --checkpoint <checkpoint_path>
 
-- LSRW:
+Example:
 
-```bash
-python train_diffusion.py --config configs/lowlight.yml
-```
-
-Note: Use additional CLI options or edit `configs/lowlight.yml` to change dataset paths, batch sizes, number of epochs, and other hyperparameters.
-
-**Inference / Evaluation**
-
-Run evaluation for each checkpoint using `eval_only_v3.py` and specify the corresponding checkpoint file:
-
-- LOLv2-Real:
-
-```bash
 python eval_only_v3.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-real.pth
-```
+Repository Structure
+├── models/        # Model implementations
+├── datasets/      # Dataset loaders and preprocessing
+├── utils/         # Utilities and evaluation metrics
+├── configs/       # Configuration files
+├── checkpoints/   # Pretrained models
+Notes
+Ensure CUDA and GPU drivers are correctly installed.
 
-- LOLv2-Syn:
+If dependency installation fails, upgrade pip:
 
-```bash
-python eval_only_v3.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-syn.pth
-```
+python -m pip install --upgrade pip
+Large datasets may require sufficient storage and proper file permissions.
+Code Availability
 
-- LOLv1:
-
-```bash
-python eval_only_v3.py --config configs/lowlight.yml --checkpoint checkpoints/lolv1.pth
-```
-
-- LSRW:
-
-```bash
-python eval_only_v3.py --config configs/lowlight.yml --checkpoint checkpoints/lsrw.pth
-```
-
-**Repository Layout**
-
-- `models/` — model implementations (`unet.py`, `ddm.py`, `restoration.py`, etc.)\
-- `datasets/` — dataset loaders and preprocessing (`datasets/scratch/lowlight.py`)\
-- `utils/` — utilities and metrics\
-- `configs/` — configuration files (e.g., `lowlight.yml`)\
-- `checkpoints/` — place pretrained and export weights here
-
-**Notes & Troubleshooting**
-
-- If you encounter CUDA-related errors, verify your GPU drivers, CUDA toolkit installation, and that your installed `torch` matches the CUDA version.\
-- Upgrade `pip` if dependency installation fails: `python -m pip install --upgrade pip`.\
-- For large datasets, ensure sufficient disk space and correct file permissions.
+The complete implementation is currently under preparation and will be fully released upon paper acceptance.
