@@ -25,6 +25,7 @@ pip install -r requirements.txt
 Download the datasets and organize them under:
 ./datasets/scratch/LLIE
 Directory structure:
+``` Plaintext
 LLIE
 ├── LOLv1
 │   ├── Train
@@ -41,7 +42,7 @@ LLIE
 │       ├── Train
 │       └── Test
 Please ensure the directory structure is strictly followed.
-
+```
 
 ## Pre-trained Models
 
@@ -58,8 +59,9 @@ Place the downloaded files under:
 
 Run training with:
 
+```bash
 python train_diffusion.py --config configs/lowlight.yml
-
+```
 You can modify the following settings in configs/lowlight.yml:
 
 Dataset paths
@@ -71,20 +73,22 @@ Other hyperparameters
 ## Inference / Evaluation
 
 Run evaluation with:
-
+```bash
 python eval_only_v3.py --config configs/lowlight.yml --checkpoint <checkpoint_path>
-
+```
 Example:
-
+```bash
 python eval_only_v3.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-real.pth
-
+python eval_only_v3.py --config configs/lowlight.yml --checkpoint <checkpoint_path>
+```
 ## Repository Structure
+``` Plaintext
 ├── models/        # Model implementations
 ├── datasets/      # Dataset loaders
 ├── utils/         # Utilities and metrics
 ├── configs/       # Configuration files
 ├── checkpoints/   # Pretrained models
-
+```
 ## Notes
 Ensure CUDA and GPU drivers are correctly installed.
 Upgrade pip if needed:
