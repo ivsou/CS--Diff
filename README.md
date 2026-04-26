@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository provides the official implementation of **CS³-Diff**, a diffusion-based framework for low-light image enhancement (LLIE). The project includes training and evaluation scripts, model implementations, dataset loaders, and utility functions.
+This repository provides the official implementation of **CS³-Diff**, a diffusion-based framework for low-light image enhancement (LLIE). The project includes training and evaluation scripts, mode[...]
 
 All required dependencies are listed in `requirements.txt`.
 
@@ -18,6 +18,7 @@ Install PyTorch and project dependencies:
 ```bash
 pip install torch torchvision torchaudio
 pip install -r requirements.txt
+```
 
 ## Dataset Preparation
 
