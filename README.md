@@ -2,7 +2,8 @@
 
 ## Overview
 
-This repository provides the official implementation of **CS³-Diff**, a diffusion-based framework for low-light image enhancement (LLIE). The project includes training and evaluation scripts, mode[...]
+Low-light image enhancement (LLIE) aims to improve visual quality and support robust downstream vision tasks under challenging illumination conditions. In this paper, we propose CS$^3$-Diff, a collaborative spatio-spectral-scale guided diffusion framework for LLIE. Specifically, a Dual-stage Wavelet-based Structural Prior Guidance (DWSPG) module is introduced to enhance edge-aware structural priors in the wavelet domain. To improve spatial consistency during patch-wise inference, we further design a Global-Scale Positional Embedding (GSPE) that jointly encodes timestep, spatial, and scale information. In addition, a Residual Frequency-domain Phase Mixer (RFPM) is proposed to facilitate faithful texture reconstruction through frequency-domain phase modulation.
+
 
 All required dependencies are listed in `requirements.txt`.
 
