@@ -22,6 +22,16 @@ pip install -r requirements.txt
 
 ---
 
+# 📂 Repository Structure
+```text
+├── models/        # Model implementations
+├── datasets/      # Dataset loaders
+├── utils/         # Utilities and metrics
+├── configs/       # Configuration files
+├── checkpoints/   # Pretrained models
+```
+
+
 # 📊 Dataset 
 
 We evaluate CS³-Diff on the following benchmark datasets:
@@ -73,20 +83,3 @@ Example:
 ```bash
 python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-real.pth
 ```
-
-# 📂 Repository Structure
-```text
-├── models/        # Model implementations
-├── datasets/      # Dataset loaders
-├── utils/         # Utilities and metrics
-├── configs/       # Configuration files
-├── checkpoints/   # Pretrained models
-```
-## Notes
-Ensure CUDA and GPU drivers are correctly installed.
-Upgrade pip if needed:
-python -m pip install --upgrade pip
-Ensure sufficient storage for large datasets.
-Code Availability
-
-The complete implementation is currently under preparation and will be fully released upon paper acceptance.
