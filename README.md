@@ -51,7 +51,7 @@ Please ensure the directory structure is strictly followed.
 
 Pretrained checkpoints:
 
-Baidu Cloud: https://pan.baidu.com/s/1oOooNYFCznpJ1SC-eJ0s_g
+Baidu Cloud: https://pan.baidu.com/s/1UuqeO4yuhZ2JhcgtHIfRMg
 Extraction code: 9912
 
 Place the downloaded files under:
