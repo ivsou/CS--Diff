@@ -51,7 +51,7 @@ LLIE
 ```
 Please ensure the directory structure is strictly followed.
 
-## Pre-trained Models
+# 📦 Pre-trained Models
 
 Pretrained checkpoints:
 
@@ -62,32 +62,19 @@ Place the downloaded files under:
 ```bash
 ./checkpoints
 ```
-## Training
 
-Run training with:
-
-```bash
-python train_diffusion.py --config configs/lowlight.yml
-```
-You can modify the following settings in configs/lowlight.yml:
-
-Dataset paths
-Batch size
-Number of epochs
-Other hyperparameters
-
-
-## Inference / Evaluation
+## 🧪 Inference 
 
 Run evaluation with:
 ```bash
-python eval_only_v3.py --config configs/lowlight.yml --checkpoint <checkpoint_path>
+python inference.py --config configs/lowlight.yml --checkpoint <checkpoint_path>
 ```
 Example:
 ```bash
-python eval_only_v3.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-real.pth
+python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-real.pth
 ```
-## Repository Structure
+
+# 📂 Repository Structure
 ```text
 ├── models/        # Model implementations
 ├── datasets/      # Dataset loaders
