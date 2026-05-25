@@ -93,5 +93,8 @@ python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lsrw.
 <img width="1095" height="500" alt="image" src="https://github.com/user-attachments/assets/e9f701ac-c512-475d-a593-62824f6cde49" />
 <img width="1095" height="500" alt="image" src="https://github.com/user-attachments/assets/c8898eea-192c-4869-86b4-9a314dee9da2" />
 <img width="1095" height="500" alt="image" src="https://github.com/user-attachments/assets/7506cc12-0c76-4d85-bdd6-97ea149aa39d" />
+---
 
-
+#  📌 Notes
+- This repository provides the implementation of CS³-Diff.
+- Please refer to the paper for more architectural and theoretical details.
