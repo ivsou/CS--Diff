@@ -82,14 +82,8 @@ python inference.py --config configs/lowlight.yml --checkpoint <checkpoint_path>
 Example:
 ```bash
 python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-real.pth
-```
-```bash
 python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-syn.pth
-```
-```bash
 python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lolv1.pth
-```
-```bash
 python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lsrw.pth
 ```
 # 📝 Experimental Results
