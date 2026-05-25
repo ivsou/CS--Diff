@@ -83,6 +83,15 @@ Example:
 ```bash
 python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-real.pth
 ```
+```bash
+python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lolv2-syn.pth
+```
+```bash
+python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lolv1.pth
+```
+```bash
+python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lsrw.pth
+```
 # 📝 Experimental Results
 <img width="1095" height="500" alt="image" src="https://github.com/user-attachments/assets/c8955484-d819-44e7-b48c-88ad65407480" />
 <img width="1095" height="500" alt="image" src="https://github.com/user-attachments/assets/b6d15b2a-1b93-433b-b093-875e7ee7e432" />
