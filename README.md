@@ -4,7 +4,7 @@
 
 Low-light image enhancement (LLIE) aims to improve visual quality and support robust downstream vision tasks under challenging illumination conditions. In this paper, we propose CS³-Diff:, a collaborative spatio-spectral-scale guided diffusion framework for LLIE. Specifically, a Dual-stage Wavelet-based Structural Prior Guidance (DWSPG) module is introduced to enhance edge-aware structural priors in the wavelet domain. To improve spatial consistency during patch-wise inference, we further design a Global-Scale Positional Embedding (GSPE) that jointly encodes timestep, spatial, and scale information. In addition, a Residual Frequency-domain Phase Mixer (RFPM) is proposed to facilitate faithful texture reconstruction through frequency-domain phase modulation.
 
-<img width="865" height="567" alt="Figure2" src="https://github.com/user-attachments/assets/070f80a7-61fc-40b0-9fcb-60d6a220664d" />
+            <img width="865" height="567" alt="Figure2" src="https://github.com/user-attachments/assets/070f80a7-61fc-40b0-9fcb-60d6a220664d" />
 
 ---
 # ⚙️ Environment Setup
@@ -93,7 +93,6 @@ python inference.py --config configs/lowlight.yml --checkpoint checkpoints/lsrw.
 <img width="1095" height="500" alt="image" src="https://github.com/user-attachments/assets/e9f701ac-c512-475d-a593-62824f6cde49" />
 <img width="1095" height="500" alt="image" src="https://github.com/user-attachments/assets/c8898eea-192c-4869-86b4-9a314dee9da2" />
 <img width="1095" height="500" alt="image" src="https://github.com/user-attachments/assets/7506cc12-0c76-4d85-bdd6-97ea149aa39d" />
----
 
 #  📌 Notes
 - This repository provides the implementation of CS³-Diff.
