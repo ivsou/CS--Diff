@@ -8,9 +8,12 @@ Low-light image enhancement aims to improve visual quality and support robust do
 
 ---
 # 🔑 Core Contributions
-<img width="1107" height="410" alt="image" src="https://github.com/user-attachments/assets/8a532f22-2b4e-49e1-a3f5-695f55797fad" />
+![ DWSPG ](Figures/Figure3.jpg)
+
 - (a) Enhancement stage of DWSPG
+
 - (b) Fusion stage of DWSPG
+
 - (c) Architecture of a single Fusion Branch.
 
   <img width="514" height="431" alt="image" src="https://github.com/user-attachments/assets/feed9973-814a-404e-97da-631ad8ee9a23" />
