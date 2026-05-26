@@ -18,19 +18,23 @@ Low-light image enhancement aims to improve visual quality and support robust do
 
 <table align="center">
 <tr>
-<td align="center">
+<td align="center" width="50%">
 
-<img src="Figures/Figure4.jpg" width="420">
+<img src="Figures/Figure4.jpg" width="90%">
 
-- GSPE Module
+<br>
+
+<b>GSPE Module</b>
 
 </td>
 
-<td align="center">
+<td align="center" width="50%">
 
-<img src="Figures/Figure5(b).jpg" width="420">
+<img src="Figures/Figure5(b).jpg" width="90%">
 
-- RFPM Module
+<br>
+
+<b>RFPM Module</b>
 
 </td>
 </tr>
