@@ -16,10 +16,25 @@ Low-light image enhancement aims to improve visual quality and support robust do
 
 - (c) Architecture of a single Fusion Branch.
 
-<p align="center">
-  <img src="Figures/Figure4.jpg" width="500">
-</p>
-- Global-Scale-Position Embedding module(GSPE).
+<table align="center">
+<tr>
+<td align="center">
+
+<img src="Figures/Figure4.jpg" width="420">
+
+- GSPE Module
+
+</td>
+
+<td align="center">
+
+<img src="Figures/Figure5.jpg" width="420">
+
+- RFPM Module
+
+</td>
+</tr>
+</table>
 
 # ⚙️ Environment Setup
 
