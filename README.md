@@ -28,7 +28,7 @@ Low-light image enhancement aims to improve visual quality and support robust do
 
 <td align="center">
 
-<img src="Figures/Figure5.jpg" width="420">
+<img src="Figures/Figure5(b).jpg" width="420">
 
 - RFPM Module
 
