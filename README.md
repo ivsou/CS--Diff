@@ -40,21 +40,6 @@ Low-light image enhancement aims to improve visual quality and support robust do
 </tr>
 </table>
 
-# ⚙️ Environment Setup
-
-```bash
-- Platform: NVIDIA GPU with CUDA support (recommended)  
-- Python: 3.8  
-```
-Install PyTorch and project dependencies:
-
-```bash
-pip install torch torchvision torchaudio
-pip install -r requirements.txt
-```
-
----
-
 # 📂 Repository Structure
 ```text
 ├── models/        # Model implementations
@@ -94,6 +79,22 @@ LLIE
 ```
 Please ensure the directory structure is strictly followed.
 
+# ⚙️ Environment Setup
+
+```bash
+- Platform: NVIDIA GPU with CUDA support (recommended)  
+- Python: 3.8  
+```
+Install PyTorch and project dependencies:
+
+```bash
+pip install torch torchvision torchaudio
+pip install -r requirements.txt
+```
+
+---
+
+
 # 📦 Pre-trained Models
 
 Pretrained checkpoints:
@@ -105,6 +106,13 @@ Place the downloaded files under:
 ```bash
 ./checkpoints
 ```
+
+# 🏋️ Training
+
+Run training with:
+
+```bash
+python train.py --config configs/lowlight.yml
 
 # 🧪 Inference 
 
