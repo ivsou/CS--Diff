@@ -106,13 +106,14 @@ Place the downloaded files under:
 ```bash
 ./checkpoints
 ```
+---
 
-# 🏋️ Training
-
+# 🚀 Train 
 Run training with:
 
 ```bash
 python train.py --config configs/lowlight.yml
+```
 
 # 🧪 Inference 
 
